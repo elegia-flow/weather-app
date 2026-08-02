@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Weather App</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌤️</text></svg>">
+</head>
+
+<body>
+
+<div id="toast" class="toast hidden"></div>
+
+<div id="app">
+
+    <div id="weatherCard">
+
+    <div id="searchBox">
+            <input id="cityInput" placeholder="City">
+        <button id="searchCity" aria-label="Search">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="11" cy="11" r="8"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+        </button>
+    <div class="status-container">
+        <div id="spinner" class="spinner hidden"></div>
+        <p id="errorMessage" class="error-text hidden"></p>
+    </div>
+</div>
+
+    <div id="locationBlock">
+    <h1 id="cityMain"></h1>
+        <div id="countryWrapper">
+            <span id="countryName"></span>
+            <img id="countryFlag" src="" alt="Flag" style="display: none;">
+        </div>
+    </div>
+
+    <div id="temperatureBlock">
+
+        <div id="leftWeather">
+
+            <img id="mainWeatherIcon" src="" alt="weather">
+
+            <div id="tempSection">
+
+                <span id="temperature"></span>
+
+                <div id="units">
+                    <span id="celsius">°C</span>
+                    <span class="separator">|</span>
+                    <span id="fahrenheit">°F</span>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div id="middleWeather">
+
+            <p id="precipitation"></p>
+            <p id="humidity"></p>
+            <p id="windSpeed"></p>
+            <p id="pressure"></p>
+
+        </div>
+
+        <div id="rightWeather">
+
+            <p id="weatherType"></p>
+            <p id="dateTime"></p>
+
+        </div>
+
+    </div>
+
+</div>
+
+    <div id="forecastCard" style="display:none;"></div>
+
+    <div id="hourlyCard" style="display:none;"></div>
+
+</div>
+
+<script type="module" src="js/main.js"></script>
+
+</body>
+</html>
